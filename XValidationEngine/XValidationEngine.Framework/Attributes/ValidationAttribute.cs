@@ -19,26 +19,12 @@ namespace XValidationEngine.Framework.Attributes
         {
 
         }
-
-
-
-
-
+        
         public LogLevel LogLevel { get; set; }
-
-
-
-
-
+        
         protected XInformation Information { get; set; }
         public abstract ValidationRule Validate(object value, ValidationContext context);
-
-
-        public virtual object GetPropertyValue(ValidationContext context)
-        {
-            return GetPropertyValue(context, "SSNHeadOfHousehold");
-        }
-
+        
         protected virtual object GetPropertyValue(ValidationContext context, string keyIdentifier)
         {
             if (context == null) throw new ArgumentNullException("context");
